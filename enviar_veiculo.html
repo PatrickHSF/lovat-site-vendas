@@ -92,9 +92,7 @@
               <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
             </div>
             <div class="toast-body">
-              Desapegue, poste uma foto do seu veiculo.
-              <br>
-              <a href="enviar_veiculo.html" class="btn btn-primary">Enviar</a>
+              Venda mais rápido, contratando o PREMIUM SALE!
             </div>
           </div>
         </div>
@@ -141,7 +139,29 @@
       </div>
       <br>
     </div>
+
+
+     <video id="video"></video>
+
+  <script type="text/javascript">
+    navigator.mediaDevices.getUserMedia({video: true})
+    .then(function (mediaStream) {
+      const video = document.querySelector('#video');
+      video.srcObject = mediaStream;
+      video.play();
+    })
+    .catch(function (err) {
+      console.log('Não há permissões para acessar a webcam')
+    })
+
+  </script>
   </div>
+
+
+ 
+
+
+  
 </main>
 <footer>
   <div class="p-3 mb-2 bg-warning text-dark text-center">Desenvolvido por Patrick :D </div>
